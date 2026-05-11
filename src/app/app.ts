@@ -1,11 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from './header/header';
-import { ProductsGrid } from './products/products-grid/products-grid';
+import { HouseGrid } from './houses/house-grid/house-grid';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, ProductsGrid],
+  imports: [RouterOutlet, Header, HouseGrid],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

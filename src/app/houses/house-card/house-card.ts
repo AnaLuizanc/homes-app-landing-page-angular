@@ -3,12 +3,12 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 
 @Component({
-  selector: 'app-products-card',
+  selector: 'app-house-card',
   imports: [MatCardModule, MatButtonModule],
-  templateUrl: './products-card.html',
-  styleUrl: './products-card.css',
+  templateUrl: './house-card.html',
+  styleUrl: './house-card.css',
 })
-export class ProductsCard {
+export class HouseCard {
   protected title = 'Product Title';
   protected description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
 }
