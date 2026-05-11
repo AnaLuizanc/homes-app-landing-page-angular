@@ -1,11 +1,12 @@
-<div class="grid">
-    <app-house-card />
-    <app-house-card />
-    <app-house-card />
-    <app-house-card />
-    <app-house-card />
-    <app-house-card />
-    <app-house-card />
-    <app-house-card />
-    <app-house-card />
+<div class="houses-container">
+    <div class="houses-grid">
+        @for (house of houses(); track house.id) {
+            <app-house-card [house]="house"/>
+        } @empty {
+            <div class="empty-state">
+                <mat-icon>inventory-2</mat-icon>
+                <h3>No houses available!</h3>
+            </div>
+        }
+    </div>
 </div>

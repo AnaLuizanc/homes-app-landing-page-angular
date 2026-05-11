@@ -1,5 +1,18 @@
-.grid {
+.houses-container {
+    display: grid;
+    gap: 1rem;
+}
+
+.houses-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 1rem;
+}
+
+.empty-state {
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.5rem;
+    color: #666;
 }

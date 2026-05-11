@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import {MatCardModule} from '@angular/material/card';
-import {MatButtonModule} from '@angular/material/button';
+import { Component, input } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { House } from '../house';
 
 @Component({
   selector: 'app-house-card',
@@ -9,6 +10,5 @@ import {MatButtonModule} from '@angular/material/button';
   styleUrl: './house-card.css',
 })
 export class HouseCard {
-  protected title = 'Product Title';
-  protected description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
+  readonly house = input.required<House>();
 }
