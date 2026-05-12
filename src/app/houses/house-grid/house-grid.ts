@@ -43,6 +43,42 @@ export class HouseGrid {
       imageUrl:
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCPU_Da-CZL9i_COAfi6XemPsQQdERgzWHlw&s',
     },
+    {
+      id: 4,
+      name: 'Rustic Farmhouse',
+      location: '321 Pine St, Anytown, USA',
+      description: 'A charming farmhouse with a large barn.',
+      price: 450000,
+      imageUrl:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHTVTFJ1eGl8ST9CRbIMojy22oyPW78jD8oA&s',
+    },
+    {
+      id: 5,
+      name: 'Beachfront Condo',
+      location: '654 Ocean Ave, Anytown, USA',
+      description: 'A stunning condo with ocean views.',
+      price: 550000,
+      imageUrl:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpqvy8rSZMuJM6U-HHi8JPD8h7DdbILWmbyw&s',
+    },
+    {
+      id: 6,
+      name: 'Mountain Retreat',
+      location: '987 Pine St, Anytown, USA',
+      description: 'A peaceful retreat nestled in the mountains.',
+      price: 650000,
+      imageUrl:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJQXDTRApdcbZlqGsNn0V376AKEe3VtrCG7A&s',
+    },
+    {
+      id: 7,
+      name: 'City Loft',
+      location: '147 Broadway, Anytown, USA',
+      description: 'A modern loft in the heart of the city.',
+      price: 400000,
+      imageUrl:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKb48L-E_fMFnGzKUTNHoT5jRylrvmvW8W5Q&s',
+    }
   ]);
 
   protected readonly filteredHouses = computed(() => {
