@@ -12,6 +12,10 @@
   </mat-card-content>
 
   <mat-card-actions>
-    <button matButton>Learn more</button>
+    <button matButton (click)="openModal()">Learn more</button>
   </mat-card-actions>
 </mat-card>
+
+@if (isModalOpen()) {
+  <app-house-modal [house]="house()" (close)="closeModal()" />
+}
