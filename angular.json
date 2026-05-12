@@ -37,6 +37,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/homes-app-landing-page-angular/",
               "budgets": [
                 {
                   "type": "initial",
