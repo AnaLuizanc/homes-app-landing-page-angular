@@ -1,17 +1,17 @@
 <div class="houses-container">
     
     <mat-form-field appearance="outline" class="search-field">
-        <mat-label> Search</mat-label>
+        <mat-label>Search</mat-label>
         <input matInput [(ngModel)]="searchTerm">
     </mat-form-field>
     
     <div class="houses-grid">
-        @for (house of houses(); track house.id) {
+        @for (house of filteredHouses(); track house.id) {
             <app-house-card [house]="house"/>
         } @empty {
             <div class="empty-state">
                 <mat-icon>inventory-2</mat-icon>
-                <h3>No houses available!</h3>
+                <h3>No houses match your search!</h3>
             </div>
         }
     </div>

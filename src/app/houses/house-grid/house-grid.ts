@@ -1,10 +1,10 @@
-import { Component, signal } from '@angular/core';
-import { HouseCard } from '../house-card/house-card';
+import { Component, computed, signal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIcon } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 import { House } from '../house';
-import { MatIcon } from "@angular/material/icon";
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {FormsModule} from '@angular/forms';
+import { HouseCard } from '../house-card/house-card';
 
 @Component({
   selector: 'app-house-grid',
@@ -22,7 +22,8 @@ export class HouseGrid {
       location: '123 Main St, Anytown, USA',
       description: 'A charming cottage with a beautiful garden.',
       price: 250000,
-      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUrSxn12tzF_sIHVyzl8P7p6uH6wOy_k9uxw&s'
+      imageUrl:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUrSxn12tzF_sIHVyzl8P7p6uH6wOy_k9uxw&s',
     },
     {
       id: 2,
@@ -30,7 +31,8 @@ export class HouseGrid {
       location: '456 Elm St, Anytown, USA',
       description: 'A sleek apartment in the heart of the city.',
       price: 350000,
-      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK4n9nAPe7ZCZGqD2XWrIFgRqAilitK4wwRA&s'
+      imageUrl:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK4n9nAPe7ZCZGqD2XWrIFgRqAilitK4wwRA&s',
     },
     {
       id: 3,
@@ -38,7 +40,28 @@ export class HouseGrid {
       location: '789 Oak St, Anytown, USA',
       description: 'A luxurious villa with a private pool.',
       price: 750000,
-      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCPU_Da-CZL9i_COAfi6XemPsQQdERgzWHlw&s'
-    }
+      imageUrl:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCPU_Da-CZL9i_COAfi6XemPsQQdERgzWHlw&s',
+    },
   ]);
+
+  protected readonly filteredHouses = computed(() => {
+    const term = this.searchTerm().toLowerCase().trim();
+    if (!term) {
+      return this.houses();
+    }
+
+    return this.houses().filter(
+      (house) =>
+        house.name.toLowerCase().includes(term) || house.location.toLowerCase().includes(term) || house.description.toLowerCase().includes(term),
+    );
+  });
+
+  protected clearSearch() {
+    this.searchTerm.set('');
+  }
+
+  protected trimSearch() {
+    this.searchTerm.update((value) => value.trim());
+  }
 }
