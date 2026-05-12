@@ -2,14 +2,19 @@ import { Component, signal } from '@angular/core';
 import { HouseCard } from '../house-card/house-card';
 import { House } from '../house';
 import { MatIcon } from "@angular/material/icon";
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {FormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-house-grid',
-  imports: [HouseCard, MatIcon],
+  imports: [HouseCard, MatIcon, MatInputModule, MatFormFieldModule, FormsModule],
   templateUrl: './house-grid.html',
   styleUrl: './house-grid.css',
 })
 export class HouseGrid {
+  protected readonly searchTerm = signal('');
+
   protected readonly houses = signal<House[]>([
     {
       id: 1,

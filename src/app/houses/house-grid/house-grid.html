@@ -1,4 +1,10 @@
 <div class="houses-container">
+    
+    <mat-form-field appearance="outline" class="search-field">
+        <mat-label> Search</mat-label>
+        <input matInput [(ngModel)]="searchTerm">
+    </mat-form-field>
+    
     <div class="houses-grid">
         @for (house of houses(); track house.id) {
             <app-house-card [house]="house"/>

@@ -2,10 +2,15 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    background: rgb(215, 227, 255);
 }
 
 mat-card-content {
     flex: 1;
+}
+
+mat-card-content h3 {
+    color: rgb(5, 95, 189);
 }
 
 mat-card-header img {

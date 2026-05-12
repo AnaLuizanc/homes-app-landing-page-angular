@@ -3,10 +3,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { House } from '../house';
 import { HouseModal } from '../house-modal/house-modal';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-house-card',
-  imports: [MatCardModule, MatButtonModule, HouseModal],
+  imports: [MatCardModule, MatButtonModule, MatIconModule, HouseModal],
   templateUrl: './house-card.html',
   styleUrl: './house-card.css',
 })

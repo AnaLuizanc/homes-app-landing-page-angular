@@ -8,7 +8,10 @@
 
   <mat-card-content>
     <h3>{{ house().name }}</h3>
-    <h4>{{ house().location }}</h4>
+    <h4>
+      <mat-icon aria-hidden="false" fontIcon="location_on" class="location_on"></mat-icon> 
+      {{ house().location }}
+    </h4>
   </mat-card-content>
 
   <mat-card-actions>

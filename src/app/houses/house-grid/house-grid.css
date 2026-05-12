@@ -3,6 +3,10 @@
     gap: 1rem;
 }
 
+mat-form-field input, .search-field{
+    border-radius: 0.5rem;
+}
+
 .houses-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
