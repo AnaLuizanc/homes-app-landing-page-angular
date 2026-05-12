@@ -1,59 +1,26 @@
-# HomesAppLandingPageAngular
+# Homes App Landing Page
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.7.
+This is my first Angular project, implemented as a landing page for home listings.
 
-## Development server
+The project was inspired by the official Angular tutorial, [First App](https://angular.dev/tutorials/first-app), which I used as the starting point for learning and building this application.
 
-To start a local development server, run:
+This app was generated with [Angular CLI](https://github.com/angular/angular-cli) version 21.2.7.
 
-```bash
-ng serve
-```
+## Features
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Landing page for house listings
+- Modal view with house details
+- Built with Angular and Angular Material
 
-## Code scaffolding
+## Technologies & Stack
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+- **Angular 21.2.7** - Modern web application framework
+- **Angular Material 21.2.10** - Material Design components
+- **Standalone Components** - No NgModules required
+- **Angular Signals** - Reactive state management
+- **Vitest** - Fast unit testing framework
+- **TypeScript 5.x** - Strongly typed JavaScript
 
 ## Additional Resources
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+For more information about Angular CLI, including command reference details, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
